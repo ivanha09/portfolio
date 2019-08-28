@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   justify-items: center;
 `
 
-const Prev = styled.div`
+const Next = styled.div`
   img {
     width: 25px;
     height: 25px;
@@ -31,7 +31,7 @@ const Prev = styled.div`
   }
 `
 
-const Next = styled.div`
+const Prev = styled.div`
   img {
     width: 25px;
     height: 25px;
@@ -42,22 +42,22 @@ const Next = styled.div`
 
 const ProjectPagination = ({ next, prev }) => (
   <Wrapper>
-    {prev && (
-      <Prev>
-        <Link to={prev.fields.slug}>
-          <img src={arrowLeft} alt="Arrow Left" />
-          {prev.frontmatter.title}
-        </Link>
-      </Prev>
-    )}
-
     {next && (
       <Next>
         <Link to={next.fields.slug}>
+          <img src={arrowLeft} alt="Arrow Right" />
           {next.frontmatter.title}
-          <img src={arrowRight} alt="Arrow Right" />
         </Link>
       </Next>
+    )}
+
+    {prev && (
+      <Prev>
+        <Link to={prev.fields.slug}>
+          {prev.frontmatter.title}
+          <img src={arrowRight} alt="Arrow Left" />
+        </Link>
+      </Prev>
     )}
   </Wrapper>
 )

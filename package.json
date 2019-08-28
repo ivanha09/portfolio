@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-portfolio-emilia",
+  "name": "ivan",
   "description": "Dark themed, image-heavy portfolio. Page transitions & animations. Big images & gatsby-mdx.",
   "version": "3.0.0",
   "author": "LekoArts <hello@lekoarts.de> (https://www.lekoarts.de)",
@@ -68,7 +68,7 @@
     "prettier": "^1.18.2",
     "start-server-and-test": "^1.10.0"
   },
-  "homepage": "https://emilia.lekoarts.de",
+  "homepage": "https://www.ivanha.com",
   "bugs": {
     "url": "https://github.com/LekoArts/gatsby-starter-portfolio-emilia/issues"
   },

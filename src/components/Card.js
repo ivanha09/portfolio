@@ -18,13 +18,14 @@ const CardItem = styled(Link)`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: white;
-    transform: translateY(-6px);
+    color: ${props => rgba(props.theme.colors.link, 1)};
+    transform: translateY(-3px);
   }
 
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     min-height: 300px;
   }
+
 `
 
 const Cover = styled.div`
@@ -39,10 +40,11 @@ const Cover = styled.div`
 const Content = styled.div`
   padding: 1rem;
   position: relative;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   opacity: 0;
-  background: ${props => rgba(props.theme.colors.link, 0.65)};
+  background: #2E3132;
   height: 0;
+
 
   ${CardItem}:hover & {
     opacity: 1;
@@ -65,7 +67,7 @@ const Name = styled.h2`
   margin-top: 0;
 `
 
-const Card = ({ path, cover, date, areas, title, delay }) => {
+const Card = ({ path, cover, areas, title, delay }) => {
   const springProps = useSpring({
     config: config.slow,
     delay: 200 * delay,
@@ -82,7 +84,6 @@ const Card = ({ path, cover, date, areas, title, delay }) => {
         <Content>
           <Name>{title}</Name>
           <Bottom>
-            <div>{date}</div>
             <div>
               {areas.map((area, index) => (
                 <React.Fragment key={area}>
@@ -103,7 +104,6 @@ export default Card
 Card.propTypes = {
   path: PropTypes.string.isRequired,
   cover: PropTypes.object.isRequired,
-  date: PropTypes.string.isRequired,
   areas: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   delay: PropTypes.number.isRequired,
