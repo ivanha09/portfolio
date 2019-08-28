@@ -5,7 +5,7 @@ module.exports = {
   siteTitleAlt: 'Ivan - Portfolio', // Alternative Site title for SEO
   siteTitleShort: 'Ivan', // short_name for manifest
   siteHeadline: 'Graphic Designer learning to code', // Headline for schema.org JSONLD
-  siteUrl: 'https://emilia.lekoarts.de', // Domain of your site. No trailing slash!
+  siteUrl: 'https://ivanha.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Dark One-Page portfolio with cards & detailed project views',
